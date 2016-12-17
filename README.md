@@ -26,11 +26,41 @@ Poisson GLM (i.e., a GLM with spike-history) and a multivariate
 autoregressive Poisson GLM (a GLM with spike-history AND coupling
 between neurons).
 
-* **tutorial3_regularization.m** - regularizing estimates of GLM
-  parameters (to prevent overfitting) via: (1) ridge regression (aka
-  "L2 penalty"); and (2) L2 smoothing prior ("graph Laplacian").
+* **tutorial3_regularization.m** - regularizing estimates of
+linear-Gaussian model  parameters to prevent overfitting via:
+  - (1) ridge regression (aka  "L2 penalty"); 
+  - (2) L2 smoothing prior ("graph Laplacian").
+
+* **tutorial4_regularization_PoissonGLM.m** - regularizing estimates
+  of Poisson-GLM parameters using same priors considered in tutorial3
+  (ridge and smoothing).
 
 Note that the data used for this tutorial is (unfortunately) not yet
 publicly available. If you would like access to the dataset needed to
 run the three tutorial scripts, please write to pillow at princeton
 dot edu.
+
+------------
+
+**Utility of this repository relative to other GLM packages**
+
+This tutorial is intended primarily for pedagogical purposes. It seeks
+to help students understand linear-Gaussian and Poisson GLMs. The
+tutorial scripts are (mostly) self-contained, making it easy to
+understand the basic steps involved in fitting data, and easy to alter
+(e.g., to incorporate different kinds of input regressors, or
+different kinds of Gaussian priors for regulariztaion). However, this
+implementation is not memory-efficient and does not support some of
+the advanced features available in other GLM packages my lab has
+produced (e.g., smooth basis functions for filter and spike-history
+filters, low-rank parametrization of spatio-temporal filters, flexible
+handling of trial-based data).  In particular, see the following two
+repositories for more advanced GLM applications:
+
+- [GLMspiketools](http://pillowlab.princeton.edu/code_GLM.html) -
+  designed for multi-neuron spike trains without trial structure 
+  [relevant pub: Pillow et al, *Nature* 2008]
+
+- [neuroGLM](http://pillowlab.princeton.edu/code_neuroGLM.html) -
+  designed for single-neuron, trial-structured data. Supports flexible design matrices with multiple types of
+  regressors. [relevant pub: IM Park et al, *Nat Neurosci* 2014]
