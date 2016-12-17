@@ -260,17 +260,16 @@ pGLMfilt = pGLMwts(2:end);
 % The 'glmfit' function will fit a GLM for us. Here we have specified that
 % we want the noise model to be Poisson. The default setting for the link
 % function (the inverse of the nonlinearity) is 'log', so default
-% nonlinearity is 'exp').  
-% The last argument tells glmfit to include a constant offset parameter in
-% the model, so we can use the 'Xdsgn' matrix instead of the 'Xdsgn2'
-% matrix that contains 1's in the first row.
+% nonlinearity is 'exp'). The last argument tells glmfit to include a
+% constant offset parameter in the model, so we can use the 'Xdsgn' matrix
+% instead of the 'Xdsgn2' matrix that contains 1's in the first row.
 % 
 % The above call is thus equivalent to having done:
 % > pGLMwts = glmfit(Xdsgn2,sps,'poisson', 'link', 'log','constant','off');
 
 % Compute predicted spike rate on training data
 ratepred_pGLM = exp(pGLMconst + Xdsgn*pGLMfilt);
-%  (eqiuvalent to if we had just written exp(Xdsgn2*pGLMwts))/dtStim;
+%  (equivalent to if we had just written exp(Xdsgn2*pGLMwts))/dtStim;
 
 %%  5b. Make plots showing and spike rate predictions
 
