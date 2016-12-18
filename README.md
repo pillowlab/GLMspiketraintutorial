@@ -1,6 +1,5 @@
 # GLMspiketraintutorial
-Simple tutorial on Gaussian and Poisson generalized linear models (GLMs) for single and
-multi-neuron spike train data.  
+Simple tutorial on Gaussian and Poisson generalized linear models (GLMs) for spike train data.  
 author: [Jonathan Pillow](http://pillowlab.princeton.edu), Nov 2016.
 
 This tutorial were prepared for the Society for Neuroscience 2016
@@ -10,11 +9,11 @@ held in San Diego in Nov, 2016.  The slides used
 during the 1-hour short course presentation are available the "slides"
 directory.
 
-The tutorial is broken into three pieces which aim to introduce
-methods for fitting and simulating Gaussian and Poisson regression
-models for neural data. Each is an interactive, self-contained script 
-with 'blocks' of code that demonstrate each step in the fitting /
-analysis / model comparison pipeline: 
+The tutorial is broken into four pieces which aim to introduce methods
+for fitting and simulating Gaussian and Poisson regression models for
+spike train data. Each is an interactive, self-contained script with
+'blocks' of code that demonstrate each step in the fitting / analysis
+/ model comparison pipeline:
 
 * **tutorial1_PoissonGLM.m** - illustrates the fitting of a
 linear-Gaussian GLM (also known as the 'linear least-squares
