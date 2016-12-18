@@ -5,8 +5,11 @@
 % (aka  "linear-nonlinear-Poisson" model) to retinal ganglion cell spike
 % trains stimulated with binary temporal white noise. 
 %
-% (Data from Uzzell & Chichilnisky 2004; see README.txt file in data
-% directory for details). 
+% DATASET: this tutorial is designed to run with retinal ganglion cell data
+% from Uzzell & Chichilnisky 2004. Unfortunately, data is not provided with
+% the public version of this repository because the dataset is not yet open
+% access. If you would like to access the dataset, please write to me
+% directly (pillow at princeton.edu).
 %
 % Last updated: Nov 10, 2016 (JW Pillow)
 
@@ -42,14 +45,22 @@
 
 %% ====  1. Load the raw data ============
 
+% ------------------------------------------------------------------------
+% With apologies: DATA NOT INCLUDED WITH REPOSITORY. 
+%
+% See README.md for info about gaining access to this dataset, or
+% substitute your own data here. 
+% ------------------------------------------------------------------------
+% (Data from Uzzell & Chichilnisky 2004):
 datdir = 'data_RGCs/';  % directory where stimulus lives
-load([datdir, 'Stim']);     % stimulus (temporal binary white noise)
+load([datdir, 'Stim']);    % stimulus (temporal binary white noise)
 load([datdir,'stimtimes']); % stim frame times in seconds (if desired)
-load([datdir, 'SpTimes']);  % load spike times (in units of stimulus frames)
+load([datdir, 'SpTimes']); % load spike times (in units of stim frames)
 
 % Pick a cell to work with
 cellnum = 3; % (1-2 are OFF cells; 3-4 are ON cells).
 tsp = SpTimes{cellnum};
+% -------------------------------------------------------------------------
 
 % Compute some basic statistics on the data
 dtStim = (stimtimes(2)-stimtimes(1)); % time bin size for stimulus (s)

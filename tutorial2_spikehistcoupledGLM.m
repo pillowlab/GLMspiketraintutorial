@@ -17,12 +17,20 @@
 
 %% ====  1. Load the raw data ============
 
+% ------------------------------------------------------------------------
+% With apologies: DATA NOT INCLUDED WITH REPOSITORY. 
+%
+% See README.md for info about gaining access to this dataset, or
+% substitute your own data here. 
+% ------------------------------------------------------------------------
+% (Data from Uzzell & Chichilnisky 2004):
 datdir = 'data_RGCs/';  % directory where stimulus lives
-load([datdir, 'Stim']);     % stimulus (temporal binary white noise)
+load([datdir, 'Stim']);    % stimulus (temporal binary white noise)
 load([datdir,'stimtimes']); % stim frame times in seconds (if desired)
-load([datdir, 'SpTimes']);  % load spike times (in units of stimulus frames)
+load([datdir, 'SpTimes']); % load spike times (in units of stim frames)
 ncells = length(SpTimes);  % number of neurons (4 for this dataset).
 % Neurons #1-2 are OFF, #3-4 are ON.
+% -------------------------------------------------------------------------
 
 % Compute some basic statistics on the stimulus
 dtStim = (stimtimes(2)-stimtimes(1)); % time bin size for stimulus (s)
