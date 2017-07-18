@@ -47,10 +47,10 @@
 
 % ------------------------------------------------------------------------
 % With apologies: DATA NOT INCLUDED WITH REPOSITORY. 
-%
 % See README.md for info about gaining access to this dataset, or
 % substitute your own data here. 
 % ------------------------------------------------------------------------
+
 % (Data from Uzzell & Chichilnisky 2004):
 datdir = 'data_RGCs/';  % directory where stimulus lives
 load([datdir, 'Stim']);    % stimulus (temporal binary white noise)
@@ -73,7 +73,7 @@ fprintf('--------------------------\n');
 fprintf('Loaded RGC data: cell %d\n', cellnum);
 fprintf('Number of stim frames: %d  (%.1f minutes)\n', nT, nT*dtStim/60);
 fprintf('Time bin size: %.1f ms\n', dtStim*1000);
-fprintf('Number of spikes: %d (mean rate=%.1f Hz)\n\n', nsp, nsp/nT*60);
+fprintf('Number of spikes: %d (mean rate=%.1f Hz)\n\n', nsp, nsp/nT*RefreshRate);
 
 % Let's visualize some of the raw data
 subplot(211);
@@ -442,9 +442,9 @@ fprintf('exp-GLM: %.1f\n',AIC_expGLM);
 fprintf(' np-GLM: %.1f\n',AIC_npGLM);
 fprintf('\nAIC diff (exp-np)= %.2f\n',AIC_expGLM-AIC_npGLM);
 if AIC_expGLM < AIC_npGLM
-    fprintf('exponential-nonlinearity wins!\n');
+    fprintf('AIC supports exponential-nonlinearity!\n');
 else
-    fprintf('nonparametric nonlinearity wins!\n');
+    fprintf('AIC supports nonparametric nonlinearity!\n');
     % (despite its greater number of parameters)
 end
 
