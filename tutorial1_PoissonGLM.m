@@ -520,5 +520,36 @@ ylabel('repeat #');
 xlabel('time (s)');
 title('GLM spike trains');
 
-% Now, if you have time: go back and try it out for the other three neurons!
+
+%% Suggested Exercises (advanced)
+% -------------------------------
+%
+% 1) Go back and try it out for the other three neurons!
 % (Go to block 1 and change the variable 'cellnum' to 1, 2, or 3.)
+% 
+% 2) Write your own code to do maximum likelihood estimation of the filter
+% and the nonlinearity.  Your function should take in the parameters for
+% the filter and the nonlinearity, and compute the Poisson log-likelihood
+% function, the log Probability of the spike responses given the stimuli
+% and the parameters.  A nice way to parametrize the nonlinearity is with a
+% linear combination of basis functions, e.g.
+%      f(x) = sum_i  w_i * f_i(x)
+% where f_i(x) is the i'th basis function and w_i is the weight on that
+% basis function.  You can choose the f_i to be Gaussian bumps or sigmoids,
+% i.e. f_i(x) = 1./(1+exp(-x - c_i)) where c_i is the shift for the i'th
+% basis function.
+%
+% Another alternative (that will prevent negative firing rates) is to
+% parameterize the log-firing rate with a linear combination of basis
+% functions, e.g.
+%  log(f(x)) = sum_i  w_i * f_i(x)
+%        meaning that
+%  f(x) = exp(sum_i  w_i * f_i(x))
+%  Now your weights can be negative or positive without fear of generating
+%  negative values (which will cause your negative log-likelihood function
+%  to give nans or -infs.  
+%  
+%  Write a function that takes in k and weight vector w and computes the
+%  Poisson log-likelihood.  Hand that function off to fminunc and compare
+%  the accuracy of the fits you get to the model with fixed exponential
+%  nonlinearity.
