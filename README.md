@@ -59,11 +59,12 @@ spatio-temporal filters, flexible handling of trial-based data).  For
 more advanced features and applications, see the following two
 repositories:
 
+- [neuroGLM](http://pillowlab.princeton.edu/code_neuroGLM.html) -
+  designed for single-neuron, trial-structured data. Supports flexible design matrices with multiple types of
+  regressors. Relevant pub: [Park et al, *Nat Neurosci* 2014](http://pillowlab.princeton.edu/pubs/abs_ParkI_NN14.html).
+
 - [GLMspiketools](http://pillowlab.princeton.edu/code_GLM.html) -
   designed for single- and multi-neuron spike trains with flexible
   nonlinearities, multiple timescales, and low-rank parametrization of
-  filters.  Relevant pub: [Pillow et al, *Nature* 2008](http://pillowlab.princeton.edu/pubs/abs_ParkI_NN14.html).
+  filters.  Relevant pub: [Pillow et al, *Nature* 2008](http://pillowlab.princeton.edu/pubs/abs_Pillow08_nature.html).
 
-- [neuroGLM](http://pillowlab.princeton.edu/code_neuroGLM.html) -
-  designed for single-neuron, trial-structured data. Supports flexible design matrices with multiple types of
-  regressors. Relevant pub: [Park et al, *Nat Neurosci* 2014](http://pillowlab.princeton.edu/pubs/abs_Pillow08_nature.html).

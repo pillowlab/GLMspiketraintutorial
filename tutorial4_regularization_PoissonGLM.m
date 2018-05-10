@@ -278,7 +278,7 @@ semilogx(lamvals,-negLtest_sm,'-o', 'linewidth', 2);
 xlabel('lambda');
 title('test LL');
 
-% Notice that training error gets monotonically worse as we increase lambda
+% Notice that training error gets monotonically worse as 5we increase lambda
 % However, test error has an dip at some optimal, intermediate value.
 
 % Determine which lambda is best by selecting one with lowest test error 

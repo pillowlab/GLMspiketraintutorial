@@ -65,36 +65,6 @@ dtStim = (stimtimes(2)-stimtimes(1)); % time bin size for stimulus (s)
 % correlated by considering it on a finer timescale than the frame rate of
 % the monitor.  (Indeed, this will make it look highly correlated).
 
-% For speed of our code and to illustrate the advantages of regularization,
-% let's use only a reduced (5-minute) portion of the dataset:
-nT = 120*60*1;  % # of time bins for 1 minute of data 
-Stim = Stim(1:nT); % pare down stimulus
-tsp = tsp(tsp<nT*dtStim); % pare down spikes
-
-% Now upsample to finer temporal grid
-upsampfactor = 10; % divide each time bin by this factor
-dtStimhi = dtStim/upsampfactor; % use bins 100 time bins finer
-ttgridhi = (dtStimhi/2:dtStimhi:nT*dtStim)'; % fine time grid for upsampled stim
-Stimhi = interp1((1:nT)*dtStim,Stim,ttgridhi,'nearest','extrap');
-nThi = nT*upsampfactor;  % length of upsampled stimulus
-
-% Visualize the new (upsampled) raw data:
-subplot(211);
-iiplot = 1:(60*upsampfactor); % bins of stimulus to plot
-ttplot = iiplot*dtStimhi; % time bins of stimulus
-plot(ttplot,Stimhi(iiplot), 'linewidth', 2);  axis tight;
-title('raw stimulus (fine time bins)');
-ylabel('stim intensity');
-% Should notice stimulus now constant for many bins in a row
-
-% Bin the spike train and replot binned counts
-sps = hist(tsp,ttgridhi)';
-subplot(212);
-stem(ttplot,sps(iiplot));
-title('binned spike counts');
-ylabel('spike count'); xlabel('time (s)');
-set(gca,'xlim', ttplot([1 end]));
-% Now maximum 1 spike per bin!
 
 %%  3. Divide data into "training" and "test" sets for cross-validation
 

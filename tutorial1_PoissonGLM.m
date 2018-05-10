@@ -84,7 +84,7 @@ title('raw stimulus (full field flicker)');
 ylabel('stim intensity');
 subplot(212);
 tspplot = tsp((tsp>=ttplot(1))&(tsp<ttplot(end)));
-plot(tspplot, 1, 'kd', 'markerfacecolor', 'k');
+plot(tspplot, 1, 'ko', 'markerfacecolor', 'k');
 set(gca,'xlim', ttplot([1 end]));
 title('spike times'); xlabel('time (s)');
 
@@ -98,10 +98,10 @@ sps = hist(tsp,tbins)';  % binned spike train
 
 % Replot the responses we'll putting into our regression as counts
 subplot(212);
-stem(ttplot,sps(iiplot));
+stem(ttplot,sps(iiplot), 'k', 'linewidth', 2);
 title('binned spike counts');
 ylabel('spike count'); xlabel('time (s)');
-set(gca,'xlim', ttplot([1 end]));
+set(gca,'xlim', ttplot([1 end]), 'ylim', [0 3.5]);
 
 
 %% ==== 3. Build the design matrix: slow version ======
