@@ -123,7 +123,12 @@ Xtest = [ones(ntest,1), hankel([zeros(ntfilt-1,1); stimtest(1:end-ntfilt+1)], ..
 
 % Compute maximum likelihood estimate (using 'fminunc' instead of 'glmfit')
 sta = (Xtrain'*spstrain)/sum(spstrain); % compute STA for initialization
-opts = optimset('Gradobj','on','Hessian','on','display','iter'); 
+
+% -- Set options --- 
+% opts = optimset('Gradobj','on','Hessian','on','display','iter');  % OLD VERION
+opts = optimoptions('fminunc','algorithm','trust-region','SpecifyObjectiveGradient',true,'HessianFcn','objective','display','iter');
+
+% -- Make loss function and minimize -----
 lossfun = @(prs)neglogli_poissGLM(prs,Xtrain,spstrain,dtStimhi); % set negative log-likelihood as loss func
 filtML = fminunc(lossfun,sta,opts);
 

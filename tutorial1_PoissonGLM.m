@@ -265,8 +265,8 @@ fprintf('Training perf (R^2): lin-gauss GLM, w/ offset: %.2f\n',1-mse2/rss);
 
 % This is super-easy if we rely on built-in GLM fitting code
 pGLMwts = glmfit(Xdsgn,sps,'poisson', 'constant', 'on');
-pGLMconst = pGLMwts(1);
-pGLMfilt = pGLMwts(2:end);
+pGLMconst = pGLMwts(1); % constant ("dc term"); 
+pGLMfilt = pGLMwts(2:end); % stimulus filter
 
 % The 'glmfit' function will fit a GLM for us. Here we have specified that
 % we want the noise model to be Poisson. The default setting for the link
