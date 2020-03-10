@@ -8,7 +8,7 @@
 % DATASET: this tutorial is designed to run with retinal ganglion cell
 % spike train data from Uzzell & Chichilnisky 2004. The dataset can be 
 % downloaded here:
-%    http://pillowlab.princeton.edu/data/dataset_RGCs.zip
+%    http://pillowlab.princeton.edu/data/data_RGCs.zip
 % The dataset is provided for tutorial purposes only, and should not be
 % distributed or used for publication without express permission from EJ
 % Chichilnisky (ej@stanford.edu). 
@@ -48,10 +48,10 @@
 %% ====  1. Load the raw data ============
 
 % ------------------------------------------------------------------------
-% Be sure to unzip the zip file data_RGCs.zip
-% (http://pillowlab.princeton.edu/data/dataset_RGCs.zip) and place it in
-% this directory before running the tutorial.  Or
-% substitute your own dataset here instead!
+% Be sure to unzip the data file data_RGCs.zip
+% (http://pillowlab.princeton.edu/data/data_RGCs.zip) and place it in 
+% this directory before running the tutorial.  
+% Or substitute your own dataset here instead!
 % ------------------------------------------------------------------------
 % (Data from Uzzell & Chichilnisky 2004):
 datdir = 'data_RGCs/';  % directory where stimulus lives

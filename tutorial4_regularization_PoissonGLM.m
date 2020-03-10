@@ -13,8 +13,7 @@
 % 2. L2 smoothing prior - using to an iid Gaussian prior on the
 %                         pairwise-differences of the filter(s).
 %
-% Data: from Uzzell & Chichilnisky 2004; see README.txt file in data
-% directory for details. 
+% Data: from Uzzell & Chichilnisky 2004; see README file for details. 
 %
 % Last updated: Mar 10, 2020 (JW Pillow)
 
@@ -25,9 +24,9 @@
 %% ====  1. Load the raw data ============
 
 % ------------------------------------------------------------------------
-% Be sure to unzip the zip file data_RGCs.zip
-% (http://pillowlab.princeton.edu/data/dataset_RGCs.zip) and place it in
-% this directory before running the tutorial. 
+% Be sure to unzip the data file data_RGCs.zip
+% (http://pillowlab.princeton.edu/data/data_RGCs.zip) and place it in 
+% this directory before running the tutorial.  
 % ------------------------------------------------------------------------
 % (Data from Uzzell & Chichilnisky 2004):
 datdir = 'data_RGCs/';  % directory where stimulus lives
