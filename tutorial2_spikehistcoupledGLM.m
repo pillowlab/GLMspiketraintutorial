@@ -8,7 +8,7 @@
 % (Data from Uzzell & Chichilnisky 2004; see README.txt file in data
 % directory for details). 
 %
-% Last updated: Nov 10, 2016 (JW Pillow)
+% Last updated: Mar 10, 2020 (JW Pillow)
 
 
 % Instructions: Execute each section below separately using cmd-enter.
@@ -18,10 +18,9 @@
 %% ====  1. Load the raw data ============
 
 % ------------------------------------------------------------------------
-% With apologies: DATA NOT INCLUDED WITH REPOSITORY. 
-%
-% See README.md for info about gaining access to this dataset, or
-% substitute your own data here. 
+% Be sure to unzip the zip file data_RGCs.zip
+% (http://pillowlab.princeton.edu/data/dataset_RGCs.zip) and place it in
+% this directory before running the tutorial. 
 % ------------------------------------------------------------------------
 % (Data from Uzzell & Chichilnisky 2004):
 datdir = 'data_RGCs/';  % directory where stimulus lives

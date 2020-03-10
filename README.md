@@ -6,7 +6,9 @@ This tutorial were prepared for the Society for Neuroscience 2016
 "Short Course" on
 [Data Science and Data Skills for Neuroscientists](http://www.stat.ucla.edu/~akfletcher/WebSfN.htm),
 held in San Diego in Nov, 2016.  The slides used during the 1-hour
-short course presentation are available in the "slides" directory.
+short course presentation are available in the "slides"
+directory. A small dataset required for the tutorial is available
+[here](http://pillowlab.princeton.edu/data/data_RGCs.zip).
 
 The tutorial is broken into four pieces which aim to introduce methods
 for fitting and simulating Gaussian and Poisson regression models for
@@ -36,10 +38,6 @@ between neurons).
   Poisson-GLM parameters using same two priors considered in
   tutorial3.
 
-**Data**: note that the dataset used for this tutorial is
-(unfortunately) not yet publicly available. If you would like access
-to the dataset needed to run the tutorial scripts, please write to
-pillow at princeton dot edu.
 
 ------------
 

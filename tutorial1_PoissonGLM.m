@@ -5,13 +5,15 @@
 % (aka  "linear-nonlinear-Poisson" model) to retinal ganglion cell spike
 % trains stimulated with binary temporal white noise. 
 %
-% DATASET: this tutorial is designed to run with retinal ganglion cell data
-% from Uzzell & Chichilnisky 2004. Unfortunately, data is not provided with
-% the public version of this repository because the dataset is not yet open
-% access. If you would like to access the dataset, please write to me
-% directly (pillow at princeton.edu).
+% DATASET: this tutorial is designed to run with retinal ganglion cell
+% spike train data from Uzzell & Chichilnisky 2004. The dataset can be 
+% downloaded here:
+%    http://pillowlab.princeton.edu/data/dataset_RGCs.zip
+% The dataset is provided for tutorial purposes only, and should not be
+% distributed or used for publication without express permission from EJ
+% Chichilnisky (ej@stanford.edu). 
 %
-% Last updated: Nov 10, 2016 (JW Pillow)
+% Last updated: Mar 10, 2020 (JW Pillow)
 
 
 %% How to use this tutorial:
@@ -46,11 +48,11 @@
 %% ====  1. Load the raw data ============
 
 % ------------------------------------------------------------------------
-% With apologies: DATA NOT INCLUDED WITH REPOSITORY. 
-% See README.md for info about gaining access to this dataset, or
-% substitute your own data here. 
+% Be sure to unzip the zip file data_RGCs.zip
+% (http://pillowlab.princeton.edu/data/dataset_RGCs.zip) and place it in
+% this directory before running the tutorial.  Or
+% substitute your own dataset here instead!
 % ------------------------------------------------------------------------
-
 % (Data from Uzzell & Chichilnisky 2004):
 datdir = 'data_RGCs/';  % directory where stimulus lives
 load([datdir, 'Stim']);    % stimulus (temporal binary white noise)
