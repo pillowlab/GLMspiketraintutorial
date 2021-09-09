@@ -8,7 +8,7 @@ This tutorial were prepared for the Society for Neuroscience 2016
 held in San Diego in Nov, 2016.  The slides used during the 1-hour
 short course presentation are available in the "slides"
 directory. A small dataset required for the tutorial is available
-[here](http://pillowlab.princeton.edu/data/data_RGCs.zip).
+[here](https://pillowlab.princeton.edu/data/data_RGCs.zip).
 
 The tutorial is broken into four pieces which aim to introduce methods
 for fitting and simulating Gaussian and Poisson regression models for
