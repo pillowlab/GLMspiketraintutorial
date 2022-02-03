@@ -1,20 +1,17 @@
 # GLMspiketraintutorial
 Simple tutorial on Gaussian and Poisson generalized linear models (GLMs) for spike train data.  
-author: [Jonathan Pillow](http://pillowlab.princeton.edu), Nov 2016.
+**Author**: [Jonathan Pillow](http://pillowlab.princeton.edu), Nov 2016.
 
-This tutorial were prepared for the Society for Neuroscience 2016
-"Short Course" on
-[Data Science and Data Skills for Neuroscientists](http://www.stat.ucla.edu/~akfletcher/WebSfN.htm),
-held in San Diego in Nov, 2016.  The slides used during the 1-hour
-short course presentation are available in the "slides"
-directory. A small dataset required for the tutorial is available
-[here](https://pillowlab.princeton.edu/data/data_RGCs.zip).
+**NEW (Feb 2022)**:  There is now a [python version](https://github.com/pillowlab/GLMspiketraintutorial_python) of this tutorial!
 
-The tutorial is broken into four pieces which aim to introduce methods
-for fitting and simulating Gaussian and Poisson regression models for
-spike train data. Each is an interactive, self-contained script with
-'blocks' of code that demonstrate each step in the fitting / analysis
-/ model comparison pipeline:
+**Slides**: This tutorial was prepared for use in a
+"Short Course" on [Data Science and Data Skills for Neuroscientists](https://neuronline.sfn.org/scientific-research/data-science-and-data-skills-for-neuroscientists#:~:text=Data%20science%20is%20fast%2Dgrowing,be%20used%20in%20different%20circumstances) organized at the SFN 2016 meeting. The slides used during the 1-hour
+presentation are available [here](https://github.com/pillowlab/GLMspiketraintutorial/blob/master/slides/slides_SFNshortcourse_Nov2016.pdf). 
+
+**Dataset**:  A small dataset required for the tutorial is available
+[here](https://pillowlab.princeton.edu/data/data_RGCs.zip). (Simply download this dataset, unzip it, and place it in the directory where you are running the tutorial).
+
+**Description**: This tutorial contains four scripts that introduce various methods for fitting and simulating from Gaussian and Poisson regression models for spike train data. Each script is self-contained, with 'blocks' of code that can be executed interactively, which demonstrate each step in the fitting / analysis / model comparison pipeline:
 
 * **tutorial1_PoissonGLM.m** - illustrates the fitting of a
 linear-Gaussian GLM (also known as the 'linear least-squares
