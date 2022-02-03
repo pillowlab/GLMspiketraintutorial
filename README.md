@@ -35,8 +35,19 @@ between neurons).
   Poisson-GLM parameters using same two priors considered in
   tutorial3.
 
+<br>
+ 
+------- 
 
-------------
+**Citation**:  If you wish to cite this tutorial, feel free to acknowledge the paper from which it developed:  
+[Pillow et al, *Nature* 2008](http://pillowlab.princeton.edu/pubs/abs_Pillow08_nature.html).
+ 
+
+
+
+ <br>
+
+-------
 
 **Relevance / comparison to other GLM packages**:
 
